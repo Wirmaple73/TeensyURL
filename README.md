@@ -1,6 +1,6 @@
 # In the name of God
 ## TeensyURL
-As the name implies, TeensyURL is a simple and straightforward URL shortener website with a user-friendly and eye-catching design, which is able to shorten the toughest of URLs with ease in no time.
+As the name implies, TeensyURL is a simple and straightforward URL shortener website with a user-friendly and eye-catching design, which is able to shorten the longest and toughest of URLs with ease in no time.
 
 ## Prerequisites
 PHP >= 8.1
