@@ -2,9 +2,9 @@
 if ($_SERVER["REQUEST_METHOD"] !== "POST")
 	exit();
 
-require_once("../classes/json_manager.php");
-require_once("../classes/random_url_provider.php");
-require_once("../classes/database_connection.php");
+require_once("../Classes/JsonManager.php");
+require_once("../Classes/RandomURLProvider.php");
+require_once("../Classes/DatabaseConnection.php");
 
 $jsonManager = new JsonManager();
 $url = $jsonManager->getParameter("url");

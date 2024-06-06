@@ -15,7 +15,7 @@ html{
     --color__C8 : #ffffffdc;
     --color__C9 : #259dfe6c;
 }
-/*---For All Element---*/
+/*---For All Elements---*/
 *, *::before, *::after{
     box-sizing: inherit;
     text-decoration: none;

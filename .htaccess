@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule ^([A-Za-z0-9]{6})$ redirect.php?url=$1 [NC,L]  # Redirect direct links to redirect.php
+RewriteRule ^([A-Za-z0-9]{6})$ Redirect.php?url=$1 [NC,L]  # Redirect direct links to Redirect.php

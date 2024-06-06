@@ -2,7 +2,7 @@
 if (!isset($_GET["url"]))
 	exit();
 
-require_once("classes/database_connection.php");
+require_once("Classes/DatabaseConnection.php");
 $url = "https://{$_SERVER['SERVER_NAME']}/TeensyURL/{$_GET["url"]}";
 
 try {

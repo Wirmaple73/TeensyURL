@@ -1,4 +1,4 @@
-// [+] Defining Vairbles
+// [+] Defining Variables
 const resultUrlBox = document.querySelector(".url-result");
 const copyLinkButton = document.querySelector(".url-result__button");
 
@@ -10,17 +10,17 @@ function generateShortUrl() {
         new URL(targetUrl);
     }
     catch {
-        alert("The specified URL is invalid. Please ensure you have entered it properly.");
+        alert("The specified URL is invalid. Please ensure you have entered it properly (URL must be preceded by an internet protocol like https).");
         return;
     }
     
-    fetch("api/url_shortener.php", {
+    fetch("api/UrlShortener.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: targetUrl })
     }).then(async (response) => {
         if (!response.ok) {
-            alert("An unknown error has occurred. Please try again later.");
+            alert(`An unknown error has occurred (${response.status}: ${response.statusText}). Please try again later.`);
             return;
         }
         
