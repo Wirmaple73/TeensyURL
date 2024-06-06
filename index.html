@@ -3,58 +3,39 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Alireza Shahidi Fard">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="urlshortener,shortener,url">
+		<!--Import Files-->
+		<link rel="stylesheet" type="text/css" href="Styles/Font.css">
+		<link rel="stylesheet" type="text/css" href="Styles/App.css">
+		<!--Page Title-->
 		<title>TeensyURL: Generate short URLs with ease!</title>
-		
-		<script>
-			function generateShortUrl() {
-				const targetUrl = document.getElementById("targetUrl").value;
-				
-				try {
-					new URL(targetUrl);
-				}
-				catch {
-					alert("The specified URL is invalid. Please ensure you have entered it properly.");
-					return;
-				}
-				
-				fetch("api/url_shortener.php", {
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify({ url: targetUrl })
-				}).then(async (response) => {
-					if (!response.ok) {
-						alert("An unknown error has occurred. Please try again later.");
-						return;
-					}
-					
-					let json = await response.json();
-
-					if (json.errorMessage != null) {
-						alert(`An error has occurred:\n${json.errorMessage}`);
-						return;
-					}
-
-					const generatedUrlCaption = document.querySelector("#generatedUrl");
-					generatedUrlCaption.innerHTML = generatedUrlCaption.href = json.generatedUrl;
-					
-					document.getElementById("generatedMessage").style.visibility = "visible";
-					document.getElementById("targetUrl").value = "";
-				});
-			}
-		</script>
 	</head>
 	<body>
-		<label for="targetUrl">Target URL:</label><br>
-		<input type="text" id="targetUrl" name="targetUrl" maxlength="2048" style="width: 400px;"><br><br>
-	
-		<button onclick="generateShortUrl();">Generate Short URL</button><br><br>
-		
-		<div id="generatedMessage" style="visibility: hidden;">
-			<span>Your short URL has been successfully generated:</span><br>
-			<a id="generatedUrl" target="_blank"></a>
-
-			<button onclick="navigator.clipboard.writeText(document.getElementById('generatedUrl').href);">Copy to clipboard</button>
+		<div class="url-result">
+			<div>
+				<span class="url-result__title">Your short URL has been successfully generated:</span><br>
+				<a class="url-result__value" id="generatedUrl" target="_blank">https://ssss.ccomsssssss</a>
+			</div>
+			<button class="url-result__button"">Copy to clipboard</button>
 		</div>
+		<div class="container">
+			<div class="shape"></div>
+			<div class="shape"></div>
+
+			<section class="url-box">
+				<h1 class="url-box__title">URL Shortener</h1>
+				<div class="url-box__wrapper">
+					<label class="url-box__label" for="targetUrl">Target URL</label>
+					<input class="url-box__input" type="text" id="targetUrl" name="targetUrl" maxlength="2048" placeholder="Enter Your URL . .">
+				</div>
+				<button class="url-box__generate-btn" onclick="generateShortUrl();">
+					<div class="hover-x"></div>
+					<span>Generate Short URL</span>
+				</button>
+			</section>
+		</div>
+	
+		<script type="application/javascript" src="Scripts/App.js"></script>
 	</body>
 </html>
