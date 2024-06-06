@@ -22,6 +22,8 @@ try {
 	do {
 		// Ensure the generated short URL isn't duplicated
 		$generatedUrl = $urlProvider->next();
+		
+		date_default_timezone_set("Asia/Tehran");
 		$date = date("Y-m-d H:i:s");
 	} while ($connection->query("SELECT COUNT(ShortURL) FROM url WHERE ShortURL = ?;", "s", $generatedUrl)->fetch_column() > 0);
 	
