@@ -1,0 +1,242 @@
+/*---Root---*/
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+}
+/*---Variables---*/
+:root{
+    --color__C1 : #070813;
+    --color__C2 : #f3f3f3;
+    --color__C3 : rgba(256, 256, 256, 0.3);
+    --color__C4 : rgba(256, 256, 256, 0.13);
+    --color__C5 : #0D47A1, #42A5F5;
+    --color__C6 : 45deg, #E65100, #FFA726;
+    --color__C7 : rgba(255,255,255,0.07);
+    --color__C8 : #ffffffdc;
+    --color__C9 : #259dfe6c;
+}
+/*---For All Element---*/
+*, *::before, *::after{
+    box-sizing: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin : 0;
+}
+button, input{
+    border: none;
+    outline: none;
+}
+/*---Body---*/
+body{
+    background-color: var(--color__C1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+/*---URL Box---*/
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+}
+.url-box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 0.2rem solid var(--color__C3);
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+    background-color: var(--color__C4);
+    backdrop-filter: blur(2rem);
+    z-index: 100;
+    padding: 2rem 3rem;
+    color: var(--color__C2);
+    text-align: center;
+}
+.shape{
+    position: absolute;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    z-index: -100;
+
+    &:nth-child(1){
+        background-image: linear-gradient(var(--color__C5));
+        top: -2.8rem;
+        left: -5rem;
+    }
+    &:nth-child(2){
+        background-image: linear-gradient(var(--color__C6));
+        bottom: -2.8rem;
+        right: -5rem;
+    }
+}
+.url-result{
+    color: var(--color__C2);
+    border: 0.4rem dashed var(--color__C2);
+    width: 35rem;
+    position: fixed;
+    padding: 2rem 1.5rem;
+    top: -20rem;
+    left: 50%;
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+    -moz-transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+    -ms-transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+    -o-transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+}
+.url-result--active{
+    top: 2rem;
+}
+.url-result > div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 2.6rem;
+    z-index: 1;
+}
+.url-result__title{
+    font-size: 1.2rem;
+}
+.url-result__value{
+    font-family: "Consolas";
+    font-size: 1.1rem;
+    color: #000;
+    background-color: #fff;
+    display: inline-block;
+    width: fit-content;
+    margin: -2rem auto 0 auto;
+    padding-inline: 1rem;
+    border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    -o-border-radius: 0.1rem;
+    cursor:pointer;
+}
+.url-result__button{
+    cursor: pointer;
+    width: 100%;
+    color: #000;
+    padding: 0.4rem 0;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.url-box__title{
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    margin-block-end: 4rem;
+}
+.url-box__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap : 0.5rem;
+}
+.url-box__label{
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--color__C8);
+}
+.url-box__input{
+    display: block;
+    border: 0.2rem solid transparent;
+    padding: 1rem 0 1rem 1.5rem;
+    background-color: var(--color__C7);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    font-size: 1.4rem;
+    color: var(--color__C2);
+    font-family: "Poppins";
+    transition: all 0.18s ease;
+    -webkit-transition: all 0.18s ease;
+    -moz-transition: all 0.18s ease;
+    -ms-transition: all 0.18s ease;
+    -o-transition: all 0.18s ease;
+
+    &:focus{
+        border-color: #42A5F5;
+    }
+    &::placeholder{
+        font-size: 1.3rem;
+        color: var(--color__C8);
+    }
+}
+.url-box__generate-btn{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    height: 4rem;
+    background-color: var(--color__C2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color__C1);
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    &:hover > .hover-x{
+        transform: scale(100);
+        -webkit-transform: scale(100);
+        -moz-transform: scale(100);
+        -ms-transform: scale(100);
+        -o-transform: scale(100);
+    }
+}
+.url-box__generate-btn > .hover-x{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: var(--color__C9);
+    top: -2rem;
+    left: -2rem;
+    transition: all ease 1.6s;
+    -webkit-transition: all ease 1.6s;
+    -moz-transition: all ease 1.6s;
+    -ms-transition: all ease 1.6s;
+    -o-transition: all ease 1.6s;
+    z-index: 1;
+}
+.url-box__generate-btn > span{
+    position: relative;
+    z-index: 3;
+}
