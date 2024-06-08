@@ -42,7 +42,9 @@ function showModal(){
     resultUrlBox.classList.add("url-result--active");
 
     copyLinkButton.addEventListener("click", () => {
-        navigator.clipboard.writeText(document.getElementById('generatedUrl').href);
+        if(window.navigator.clipboard){
+            navigator.clipboard.writeText(document.getElementById('generatedUrl').href);
+        }
         hideModal();
     });
 }
