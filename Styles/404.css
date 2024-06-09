@@ -1,0 +1,194 @@
+/*---Root---*/
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+}
+/*---Variables---*/
+:root{
+    --color__C1 : #070813;
+    --color__C2 : #f3f3f3;
+}
+/*---For All Element---*/
+*, *::before, *::after{
+    box-sizing: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin : 0;
+}
+button, input{
+    border: none;
+    outline: none;
+}
+/*---Body---*/
+body{
+    position: relative;
+    height: 100vh;
+    background-color: var(--color__C1);
+    background-image: url("../Asset/Pictures/Stars.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*---404---*/
+.shape__mini-planet{
+    position: absolute;
+    z-index: 10;
+    animation: planet 0s linear infinite;
+    -webkit-animation: planet 0s linear infinite;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.shape__mini-planet:nth-child(1){
+    animation-duration: 6s;
+    width: 6rem;
+    height: 6rem;
+    top: 3rem;
+    left: 7rem;
+}
+.shape__mini-planet:nth-child(2){
+    animation-duration: 5s;
+    width: 8rem;
+    height: 8rem;
+    bottom: 10rem;
+    right: 20rem;
+    opacity: 0.6;
+}
+.shape__mini-planet:nth-child(3){
+    animation-duration: 4s;
+    width: 4rem;
+    height: 4rem;
+    bottom: 20rem;
+    left: 30rem;
+    opacity: 0.3;
+}
+.page-not-found{
+    max-width: 380px;
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+}
+.page-not-found__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shape__left-4{
+    z-index: 2;
+}
+.shape__planet{
+    position: relative;
+    z-index: 3;
+    margin-inline-start: -4rem;
+    img{
+        position: relative;
+    }
+}
+.shape__spaceman{
+    position: absolute;
+    z-index: 6;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.shape__rocket{
+    z-index: 5;
+    position: absolute;
+    top: -110%;
+    left: 43%;
+}
+.shape__right-4{
+    z-index: 4;
+    margin-inline-start: -4rem;
+}
+.page-not-found__footer{
+    padding-top: 1.5rem;
+    width: 100%;
+    color: var(--color__C2);
+    text-align: center;
+    margin-bottom: -50%;
+}
+.page-not-found__title{
+    font-weight: 600;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.page-not-found__subtitle{
+    font-weight: 200;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.page-not-found__button{
+    width: 12rem;
+    height: 3.5rem;
+    border: 0.1rem solid var(--color__C2);
+    background-color: transparent;
+    transition: all 0.18s ease;
+    -webkit-transition: all 0.18s ease;
+    -moz-transition: all 0.18s ease;
+    -ms-transition: all 0.18s ease;
+    -o-transition: all 0.18s ease;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    cursor: pointer;
+
+    span {
+        color: var(--color__C2);
+        font-size: 1.5rem;
+    }
+    &:hover{
+        transform: scale(1.07);
+        -webkit-transform: scale(1.07);
+        -moz-transform: scale(1.07);
+        -ms-transform: scale(1.07);
+        -o-transform: scale(1.07);
+}
+}
+/*---Responsive---*/
+@media only screen and (max-width : 797px){
+    .shape__mini-planet:nth-child(2), .shape__mini-planet:nth-child(3){
+        display: none;
+    }
+}
+@media only screen and (max-width : 450px){
+    .shape__mini-planet:nth-child(1){
+        display: none;
+    }
+    .page-not-found__header{
+        display: none;
+    }
+    .page-not-found__footer{
+        margin: 0;
+    }
+}
+/*---Animation---*/
+@keyframes planet {
+    80%{
+        transform: scale(1.2) translateY(1rem);
+        -webkit-transform: scale(1.2) translateY(1rem);
+        -moz-transform: scale(1.2) translateY(1rem);
+        -ms-transform: scale(1.2) translateY(1rem);
+        -o-transform: scale(1.2) translateY(1rem);
+}
+}
