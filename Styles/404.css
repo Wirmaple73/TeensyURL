@@ -137,7 +137,8 @@ body{
     gap: 1rem;
 }
 .page-not-found__button{
-    width: 12rem;
+    width: 80%;
+    display: block;
     height: 3.5rem;
     border: 0.1rem solid var(--color__C2);
     background-color: transparent;
