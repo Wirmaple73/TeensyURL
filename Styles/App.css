@@ -34,6 +34,8 @@ body{
     justify-content: center;
     align-items: center;
     font-family: "Poppins";
+    padding-inline: 1.3rem;
+    overflow: hidden;
 }
 /*---URL Box---*/
 .container{
@@ -239,4 +241,10 @@ body{
 .url-box__generate-btn > span{
     position: relative;
     z-index: 3;
+}
+/*---Reponsive---*/
+@media only screen and (max-width:370px){
+    .url-box{
+        padding-inline: 2rem 1.5rem;
+    }
 }
