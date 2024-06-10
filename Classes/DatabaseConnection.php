@@ -10,7 +10,12 @@ class DatabaseConnection {
 	private ?mysqli $connection = null;
 	
 	public function __construct() {
-		$this->connection = new mysqli(self::HOST_NAME, self::USERNAME, self::PASSWORD, self::DATABASE_NAME);
+		try {
+			$this->connection = new mysqli(self::HOST_NAME, self::USERNAME, self::PASSWORD, self::DATABASE_NAME);
+		}
+		catch (mysqli_sql_exception $ex) {
+			throw new DatabaseException($ex->getMessage());
+		}
 	}
 	
 	public function disconnect(): void {
