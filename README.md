@@ -1,12 +1,18 @@
-# In the name of God
-## TeensyURL
-As the name implies, TeensyURL is a simple and straightforward URL shortener website with a user-friendly and eye-catching design, which is able to shorten the longest and toughest of URLs with no sweat.
+<p align="center">
+	<h2 align="center">In the Name of God</h2>
+</p>
+
+<br>
+
+<p align="center">
+	<img alt="TeensyURL preview" src="https://github.com/Wirmaple73/TeensyURL/assets/71328992/750562ed-c292-4feb-81f9-2c7ab65ec06f"><br>
+	<h2 align="center">TeensyURL</h2>
+</p>
+
+TeensyURL is a simple and straightforward URL shortener website with a user-friendly and eye-catching design. Need I say more?
 
 ## Prerequisites
 PHP >= 8.1
-
-## Images
-![bandicam 2024-06-06 15-27-39-573](https://github.com/Wirmaple73/TeensyURL/assets/71328992/750562ed-c292-4feb-81f9-2c7ab65ec06f)
 
 ## Credits
 **Front-end developer**: Hojjat "[Hojjat-hk](https://github.com/Hojjat-hk)" Hekmatipour<br>
