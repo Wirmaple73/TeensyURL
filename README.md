@@ -16,4 +16,4 @@ PHP >= 8.1
 
 ## Credits
 **Front-end developer**: Hojjat "[Hojjat-hk](https://github.com/Hojjat-hk)" Hekmatipour<br>
-**Back-end developer**: Alireza "Wirmaple73" Shahidi Fard
+**Back-end developer**: Alireza "Wirmaple73" Shahidifard
